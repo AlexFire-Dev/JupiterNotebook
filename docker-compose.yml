@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  notebook:
+    image: jupyter/scipy-notebook
+    ports:
+      - 8888:8888
+    env_file:
+      - ./NB.env
+    volumes:
+      - jnb-data:/home/ubuntu
+      - jnb-libs:/opt/conda/lib
+    restart: unless-stopped
+
+volumes:
+  jnb-data:
+  jnb-libs:
