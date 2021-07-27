@@ -6,7 +6,7 @@ services:
     ports:
       - 8888:8888
     volumes:
-      - jnb-data:/home/ubuntu
+      - jnb-data:/home/jovyan
       - jnb-libs:/opt/conda/lib
     restart: unless-stopped
 
