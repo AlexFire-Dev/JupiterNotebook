@@ -8,8 +8,14 @@ services:
     volumes:
       - jnb-data:/home/jovyan
       - jnb-libs:/opt/conda/lib
+    networks:
+      - defaulf
     restart: unless-stopped
 
 volumes:
   jnb-data:
   jnb-libs:
+
+networks:
+  defaulf:
+    driver: bridge
